@@ -16,16 +16,7 @@ data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 st.title("Reconocimiento de Imágenes")
 #st.write("Versión de Python:", platform.python_version())
 
-col1, col2 = st.columns(2)
 
-with col1:
-    st.header('J´suis canon')
-    st.write('Para obtener esta respuesta del modelo, debes hacer un gesto más o menos así:')
-
-
-with col2:
-    st.header('Bon')
-    st.write('Para obtener esta respuesta del modelo, el gesto ahora tendría que ser así:')
 
  
 
