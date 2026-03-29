@@ -15,13 +15,10 @@ data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 
 st.title("Reconocimiento de Imágenes")
 #st.write("Versión de Python:", platform.python_version())
-
-
-
- 
-
+image = Image.open('OIG5.jpg')
+st.image(image, width=350)
 with st.sidebar:
-    st.subheader("Usando un modelo entrenado en teachable Machine puedes Usarlo en esta app para identificar gestos y cosas así")
+    st.subheader("Usando un modelo entrenado en teachable Machine puedes Usarlo en esta app para identificar")
 img_file_buffer = st.camera_input("Toma una Foto")
 
 if img_file_buffer is not None:
@@ -44,8 +41,10 @@ if img_file_buffer is not None:
     prediction = model.predict(data)
     print(prediction)
     if prediction[0][0]>0.5:
+      st.header('Bon, con Probabilidad: '+str( prediction[0][0]) )
       st.header('J´suis canon, con Probabilidad: '+str( prediction[0][0]) )
     if prediction[0][1]>0.5:
+      st.header('Arriba, con Probabilidad: '+str( prediction[0][1]))
       st.header('Bon, con Probabilidad: '+str( prediction[0][1]))
     #if prediction[0][2]>0.5:
     # st.header('Derecha, con Probabilidad: '+str( prediction[0][2]))
