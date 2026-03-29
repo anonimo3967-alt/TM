@@ -21,14 +21,13 @@ col1, col2 = st.columns(2)
 with col1:
     st.header('J´suis canon')
     st.write('Para obtener esta respuesta del modelo, debes hacer un gesto más o menos así:')
-    image = Image.open('canon')
-    st.image(image, width=350)
+    st.image('canon')
 
 with col2:
     st.header('Bon')
     st.write('Para obtener esta respuesta del modelo, el gesto ahora tendría que ser así:')
-    image2 = Image.open('bon')
-    st.image(image2, width=350)
+    st.image('bon')
+ 
 
 with st.sidebar:
     st.subheader("Usando un modelo entrenado en teachable Machine puedes Usarlo en esta app para identificar gestos y cosas así")
